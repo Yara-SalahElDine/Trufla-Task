@@ -64,6 +64,20 @@ let removeValue = (key) => {
 
     }      
 };
+let clear = () => {
+    let dictionary = {};
+    if(fs.existsSync("dictionary.json"))
+    {		
+        dictionary = JSON.parse(fs.readFileSync("dictionary.json"));
+        dictionary = {};
+        fs.writeFile("dictionary.json", JSON.stringify(dictionary), (error) => {
+            if(error)
+            {
+                    console.log(error);
+            }
+        });
+    }          
+};
 let action = process.argv[2];
 if (action)
 {
