@@ -1,0 +1,19 @@
+{
+  "name": "trufla-task",
+  "version": "1.0.0",
+  "description": "Clone this repo and build a simple dictionary key/value store script using only core NodeAPI and ECMAScript 5 or 6.  \r Store the key/value dictionary using filesystem.\r The client should be a standalone terminal tool.\r Once you have finished the challenge email the completed zip or link to a git repo of your choice.",
+  "main": "store.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yara-SalahElDine/Trufla-Task.git"
+  },
+  "author": "Yara-SalahElDine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yara-SalahElDine/Trufla-Task/issues"
+  },
+  "homepage": "https://github.com/Yara-SalahElDine/Trufla-Task#readme"
+}
