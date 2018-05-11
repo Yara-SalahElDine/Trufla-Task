@@ -29,6 +29,20 @@ let list = () => {
         console.log("\n");
     }       
 };
+let getValue = (key) => {
+    let dictionary = {};
+    if(fs.existsSync("dictionary.json"))
+    {		
+        dictionary = JSON.parse(fs.readFileSync("dictionary.json"));
+        value = dictionary[key];
+        if(value)
+        {
+            console.log(key + " => " + dictionary[key]);
+        }
+        else console.log("Couldn't Find A Value For That Key");
+
+    }      
+};
 let action = process.argv[2];
 if (action)
 {
