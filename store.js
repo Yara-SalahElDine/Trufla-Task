@@ -1,3 +1,4 @@
+#! /usr/bin/node
 let fs = require('fs');
 let addKeyValue = (key, value) => {
     let dictionary = {};
