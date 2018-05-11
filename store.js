@@ -1,3 +1,20 @@
+let fs = require('fs');
+let addKeyValue = (key, value) => {
+    let dictionary = {};
+    if(fs.existsSync("dictionary.json"))
+    {		
+        dictionary = JSON.parse(fs.readFileSync("dictionary.json"));
+    }
+    dictionary[key] = value;
+    fs.writeFile("dictionary.json", JSON.stringify(dictionary), (error) => {
+        if(error)
+        {
+            console.log(error);
+        }
+    });
+    console.log(key+" => "+value+' Added To Dictionary'); 
+    console.log("\n");       
+};
 let action = process.argv[2];
 if (action)
 {
