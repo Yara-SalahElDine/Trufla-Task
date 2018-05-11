@@ -15,6 +15,20 @@ let addKeyValue = (key, value) => {
     console.log(key+" => "+value+' Added To Dictionary'); 
     console.log("\n");       
 };
+let list = () => {
+    let dictionary = {};
+    if(fs.existsSync("dictionary.json"))
+    {		
+        dictionary = JSON.parse(fs.readFileSync("dictionary.json"));
+        console.log("\n  Dictionary");
+        console.log("*--*--*--*--*")
+        for (var key in dictionary) 
+        {
+            console.log(key + " => " + dictionary[key]);
+        }
+        console.log("\n");
+    }       
+};
 let action = process.argv[2];
 if (action)
 {
