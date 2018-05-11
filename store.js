@@ -43,6 +43,27 @@ let getValue = (key) => {
 
     }      
 };
+let removeValue = (key) => {
+    let dictionary = {};
+    if(fs.existsSync("dictionary.json"))
+    {		
+        dictionary = JSON.parse(fs.readFileSync("dictionary.json"));
+        value = dictionary[key];
+        if(value)
+        {
+            delete dictionary[key];
+            fs.writeFile("dictionary.json", JSON.stringify(dictionary), (error) => {
+                if(error)
+                {
+                    console.log(error);
+                }
+            });
+            console.log(key+" => "+value+" Deleted From Dictionary\n");   
+        }
+        else console.log("Couldn't Find A Value For That Key");
+
+    }      
+};
 let action = process.argv[2];
 if (action)
 {
